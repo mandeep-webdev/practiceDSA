@@ -3,6 +3,14 @@ const arr = [4, 5, 6, 4, 3, 2, 5, 1, 6]
 
 function findSecondLargest(arr){
     let n = arr.length;
+    // Empty Array
+    if(n == 0) {
+        return -1;
+    }
+    // If Array has only 1 element
+    if(n < 2) {
+        return null;
+    }
     let largest = -Infinity
     let secondLargest = -Infinity
 
