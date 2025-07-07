@@ -1,4 +1,8 @@
 function countDigits (number) {
+   if(number == 0) return 1;
+   // change any -ve number to a +ve number
+   number = Math.abs(number)
+   
    let count = 0;
    
    while (number !== 0) {
