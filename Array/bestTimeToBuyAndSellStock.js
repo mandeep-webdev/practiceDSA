@@ -1,3 +1,24 @@
+// TC -- O(n)
+// SC -- O(1)
+ var maxProfit = function(prices) {
+    const n = prices.length
+    let maxProfit = 0
+    let l = 0; // buy pointer
+    let r = 1; // sell pointer 
+    while (r < n) {
+        if(prices[l] > prices[r]) {
+            l = r // we want buy pointer to be minimum
+        }
+        else {
+            let profit = prices[r] - prices[l]
+            maxProfit = Math.max(maxProfit, profit)
+            
+        }
+        r++
+    }
+    return maxProfit
+    
+};
 
 /* Brute Force Approach*/
 /**
