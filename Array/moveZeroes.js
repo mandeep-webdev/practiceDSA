@@ -1,7 +1,20 @@
-/**
- * @param {number[]} nums
- * @return {void} Do not return anything, modify nums in-place instead.
- */
+// TC -- O(n)
+// SC -- O(1)
+var moveZeroes = function(nums) {
+    const n = nums.length
+    // 2 pointer
+    let l = 0
+    for(let r = 0; r <n ; r++) {
+        if(nums[r]!== 0 ){
+            // swap
+            [nums[l],nums[r]] = [nums[r],nums[l]]
+            l++
+        }
+
+    }
+    
+};
+//--------------------------------------------------- 2 Approach-------------------------------------------------------------
 var moveZeroes = function(nums) {
     const n = nums.length
     let i = 0;
