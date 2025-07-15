@@ -1,3 +1,15 @@
+// TC -- O(n)
+// SC --- O(n)
+
+var singleNumber = function(nums) {
+    let xor = 0
+    for(let el of nums) {
+        xor = xor ^ el
+    }
+    return xor
+    
+};
+//-----------------------------------------------------------
 // TC -- O(n) and SC -- O(n)
 var singleNumber = function(nums) {
     const n = nums.length
