@@ -1,7 +1,4 @@
-/**
- * @param {number} n
- * @return {boolean}
- */
+// https://leetcode.com/problems/power-of-two/
 var isPowerOfTwo = function(n) {
     // if n is 0 or -ve return false
     if(n<=0) return false
