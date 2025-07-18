@@ -1,3 +1,5 @@
+// TC -- 2^n SC -- O(n)
+
 const n = 8
 
 function fibo(n){
