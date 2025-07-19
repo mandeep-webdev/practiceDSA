@@ -14,7 +14,7 @@ var sortArray = function(nums) {
             }
 
         }
-        if(!isSwapped) return nums
+        if(!isSwapped) break
        
 
     }
