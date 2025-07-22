@@ -1,5 +1,5 @@
 // https://www.geeksforgeeks.org/problems/insertion-sort/1
-// TC -- O(n) // SC -- O(1)
+// TC -- Worst case: O(n²) (reverse sorted) // SC -- O(1)
 class Solution {
     insertionSort(arr) {
         // code here
