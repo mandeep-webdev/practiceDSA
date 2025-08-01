@@ -1,5 +1,5 @@
 // TC -- O(n) 
-// SC -- O(n)
+// SC --  26 lowercase letters → constant space, so O(1)
 class Solution {
     /**
      * @param {string} s
