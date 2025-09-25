@@ -1,5 +1,5 @@
 // brute force
-// TC -- O(n) * O(n2)
+// TC -- O(n1 · n2²)
 
 var nextGreaterElement = function(nums1, nums2) {
     const result = []
