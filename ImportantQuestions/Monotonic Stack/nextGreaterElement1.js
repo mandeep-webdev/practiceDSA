@@ -1,3 +1,31 @@
+// TC -- O(n) + O(m) 
+// SC -- O(n)
+var nextGreaterElement = function(nums1, nums2) {
+    // precompute next greater element for all elements of nums2
+    // take map {value : greaterEl}
+    const map = new Map
+    const stack = []
+    const result = Array(nums1.length).fill(-1)
+
+    for(let i=0; i<nums2.length; i++){
+        while(stack.length > 0 && nums2[i] > nums2[stack[stack.length - 1]]){
+              map.set(nums2[stack.pop()],nums2[i])
+        }
+        stack.push(i) // waiting element
+
+    }
+
+    for(let j = 0; j<nums1.length; j++) {
+        if(map.has(nums1[j])) {
+            result[j] = map.get(nums1[j])
+        }
+    }
+
+    return result;
+
+    
+};
+
 // brute force
 // TC -- O(n1 · n2²)
 
