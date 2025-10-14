@@ -1,5 +1,5 @@
 //-----------------------------------------Optimized Solution-----------------------------------------------------------
-// Tc--- O(n) SC---O(n)
+// Tc--- O(n + m) ,  SC---O(n)
 var canConstruct = function(ransomNote, magazine) {
     const available = new Map()
     for(let ch of magazine){
