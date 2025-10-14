@@ -1,3 +1,23 @@
+//-----------------------------------------Optimized Solution-----------------------------------------------------------
+// Tc--- O(n) SC---O(n)
+var canConstruct = function(ransomNote, magazine) {
+    const available = new Map()
+    for(let ch of magazine){
+        available.set(ch,(available.get(ch) || 0 )+ 1)
+    }
+    for(let ch of ransomNote){
+        // character is available in the inventory and lets use it
+        if(available.has(ch) && available.get(ch) > 0 ){
+            available.set(ch,available.get(ch) - 1)
+            
+        }
+        else {
+            return false
+        }
+        
+    }
+    return true
+};
 //---------------------------------------Naive Approach---------------------------------------------------------------------
 // TC -- O(n2) , SC --- O(n) 
 var canConstruct = function(ransomNote, magazine) {
