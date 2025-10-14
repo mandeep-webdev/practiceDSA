@@ -1,5 +1,5 @@
 //-----------------------------------------Optimized Solution-----------------------------------------------------------
-// Tc--- O(n + m) ,  SC---O(n)
+// Tc--- O(n + m) ,  SC---O(1) -- only lowercase letters
 var canConstruct = function(ransomNote, magazine) {
     const available = new Map()
     for(let ch of magazine){
@@ -19,7 +19,7 @@ var canConstruct = function(ransomNote, magazine) {
     return true
 };
 //---------------------------------------Naive Approach---------------------------------------------------------------------
-// TC -- O(n2) , SC --- O(n) 
+// TC -- O(n2) , SC --- O(1) 
 var canConstruct = function(ransomNote, magazine) {
     if(magazine.length < ransomNote.length) return false
     const rArr = ransomNote.split('')
