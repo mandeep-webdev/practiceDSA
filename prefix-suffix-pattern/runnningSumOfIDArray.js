@@ -20,3 +20,20 @@ var runningSum = function(nums) {
     return result
     
 };
+// Optimized solution using prefix sum
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+// TC -- O(n) and SC -- O(n)
+var runningSum = function(nums) {
+    const n = nums.length
+    const prefix = []
+    prefix[0] = nums[0]
+    for(let i=1; i<n; i++) {
+        prefix[i] = prefix[i-1] + nums[i]
+
+    }
+    return prefix
+};
