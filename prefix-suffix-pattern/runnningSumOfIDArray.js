@@ -37,3 +37,18 @@ var runningSum = function(nums) {
     }
     return prefix
 };
+
+// Space Optimization solution -- O(1)
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var runningSum = function(nums) {
+    const n = nums.length
+    
+   
+    for(let i=1; i<n; i++) {
+        nums[i] = nums[i] + nums[i-1]
+    }
+    return nums
+};
