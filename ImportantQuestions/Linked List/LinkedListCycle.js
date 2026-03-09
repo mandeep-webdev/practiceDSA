@@ -17,3 +17,26 @@ var hasCycle = function(head) {
     return false
 
 };
+// Follow up Question Return the node where Cycle Begins (Linked List Cycle 2)
+// https://leetcode.com/problems/linked-list-cycle-ii/
+// TC -- O(n) and SC -- O(1)
+var detectCycle = function(head) {
+    let slow = head
+    let fast = head
+    while(fast !== null && fast.next !== null) {
+        slow = slow.next
+        fast = fast.next.next
+        if(slow === fast) {
+            // cycle exists
+            slow = head
+            while(fast !== slow) {
+                slow = slow.next
+                fast = fast.next
+            }
+            return slow
+
+        }
+    }
+    return null
+    
+};
